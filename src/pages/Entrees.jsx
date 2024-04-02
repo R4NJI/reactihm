@@ -68,10 +68,10 @@ const Entrees = () => {
 
                 <div className='d-flex flex-row justify-content-start'>
                     <div className='d-flex flex-column p-3' style = {{...scrollcarte,border:'1px solid black',marginRight:'35px'}}>
-                        <Carteentree/>
-                        <Carteentree/>
-                        <Carteentree/>
-                        <Carteentree/>
+                        <Carteentree type="entrer"/>
+                        <Carteentree type="entrer"/>
+                        <Carteentree type="entrer"/>    
+                        <Carteentree type="entrer"/>
                     </div>
                     <div className='d-flex flex-column p-4' style={{...scrollcarteentree,border:'1px solid black'}}>
                         <div style={{fontWeight:'bold',textAlign:'center'}} className='mb-3'>Les produits à entrer</div>
@@ -98,9 +98,9 @@ const Entrees = () => {
                             <div style={{fontWeight:'bold'}}>36 kg</div>
                         </div>
                         <div className='d-flex flex-column justify-content-around mb-3' >
-                                <Carteentreeconfirm/>
-                                <Carteentreeconfirm/>
-                                <Carteentreeconfirm/>
+                                <Carteentreeconfirm />
+                                <Carteentreeconfirm />
+                                <Carteentreeconfirm />
                         </div>
                         <div className='d-flex flex-row justify-content-end'>
                             <div><button type='button' className="btn btn-md" style={{marginRight:'20px',backgroundColor:'#D4CBE5',color:'white'}}>Annuler</button></div>

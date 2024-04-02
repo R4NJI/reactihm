@@ -2,7 +2,7 @@ import imagefraise from './image/imagefraise.png'
 import iconstockok from './image/iconstockok.png'
 import iconsubmitentree from './image/iconsubmitentree.png'
 
-function Carteentree() {
+function Carteentree( {type} ) {
     const mymargin = {
         marginRight:'25px'
     }
@@ -45,10 +45,10 @@ function Carteentree() {
             </div>
 
             <div className='d-flex flex-column justify-content-between'>
-                <div>Nombre d'unité à entrer</div>
+                <div>Nombre d'unité à {type}</div>
                 <div className='d-flex flex-row justify-content-around align-items-center'>
                     <div>
-                        <input type='number' min='1' value="1" style={{ width: '50px' }}/>
+                        <input type='number' min='1' style={{width:'50px'}}/>
                     </div>
                     <div>
                         <button type='button' className="btn btn-md" style={{backgroundColor:'#863718'}}>

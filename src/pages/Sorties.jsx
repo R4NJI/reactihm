@@ -68,13 +68,13 @@ const Sorties = () => {
 
                 <div className='d-flex flex-row justify-content-start'>
                     <div className='d-flex flex-column p-3' style = {{...scrollcarte,border:'1px solid black',marginRight:'35px'}}>
-                        <Carteentree/>
-                        <Carteentree/>
-                        <Carteentree/>
-                        <Carteentree/>
+                        <Carteentree type="sortir"/>
+                        <Carteentree type="sortir"/>
+                        <Carteentree type="sortir"/>
+                        <Carteentree type="sortir"/>
                     </div>
                     <div className='d-flex flex-column p-4' style={{...scrollcarteentree,border:'1px solid black'}}>
-                        <div style={{fontWeight:'bold',textAlign:'center'}} className='mb-3'>Les produits à entrer</div>
+                        <div style={{fontWeight:'bold',textAlign:'center'}} className='mb-3'>Les produits à sortir</div>
                         <div className='d-flex flex-row justify-content-between'>
                             <div style={{marginRight:'100px'}}>Destination</div>
                             <div>
