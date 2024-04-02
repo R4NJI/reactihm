@@ -1,7 +1,7 @@
 
 import iconsearch from './image/iconsearch.png'
 
-import Carte from './Carte'
+
 import { useState } from 'react';
 
 const Historique = () => {
