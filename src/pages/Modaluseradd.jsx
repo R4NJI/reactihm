@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-function Modaluseradd() {
+function Modaluseradd({hideAddUser}) {
     const inputRef = useRef()
 
     const [selectedFile,setSelectedFile] = useState(null)
@@ -33,7 +33,7 @@ function Modaluseradd() {
 
     return (
        <div className='d-flex flex-column justify-content-center align-items-center' style={stylecontainer}>
-            <form style={stylediv} className='d-flex flex-column justify-content-center'>
+            <form style={stylediv} className='d-flex flex-column justify-content-center bg-white'>
                 <div className='d-flex flex-row justify-content-center mt-3 mb-3'>
                     <div style={{fontWeight:'bold'}}><h3>Ajouter un nouveau utilisateur</h3></div>
                 </div>
@@ -74,7 +74,7 @@ function Modaluseradd() {
                 </div>
 
                 <div className='d-flex flex-row justify-content-start mb-4' >
-                    <div style={{marginRight:'20px',marginLeft:'73px'}}><button type="button" className="btn btn-sm" style={{backgroundColor:'#D4CBE5',color:'white'}}>Annuler</button></div>
+                    <div style={{marginRight:'20px',marginLeft:'73px'}}><button type="button" className="btn btn-sm" style={{backgroundColor:'#D4CBE5',color:'white'}} onClick={hideAddUser}>Annuler</button></div>
                     <div><button type="submit" className="btn btn-sm" style={{backgroundColor:'#1C822C',color:'white'}}>Confirmer</button></div>
                 </div>
             </form>

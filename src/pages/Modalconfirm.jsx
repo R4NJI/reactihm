@@ -1,7 +1,7 @@
 import iconinterro from './image/iconinterro.png'
 
 
-function Modalconfirm() {
+function Modalconfirm( {hideConfirm} ) {
 
     const stylecontainer = {
         position:'absolute',
@@ -21,7 +21,7 @@ function Modalconfirm() {
 
     return (
        <div className='d-flex justify-content-center align-items-center' style={stylecontainer}>
-            <div style={stylediv} className="d-flex flex-row justify-content-around align-items-start">
+            <div style={stylediv} className="d-flex flex-row justify-content-around align-items-start bg-white">
                 <div>
                     <img src={iconinterro} alt="icon d'intérrogation"/>
                 </div>
@@ -29,8 +29,7 @@ function Modalconfirm() {
                     <div className='d-flex flex-row justify-content-center align-items-center mb-4'>Voulez-vous vraiment supprimer l'élément?</div>
                     <div className='d-flex flex-row justify-content-center align-items-center'>
                         <button type="button" className="btn btn-md" style={{marginRight:'20px',backgroundColor:'#1C822C',color:'white'}}>Oui</button>
-                        <div><button type='button' className="btn btn-md" style={{backgroundColor:'#D4CBE5',color:'white'}}>Non</button></div>
-                        
+                        <div><button type='button' className="btn btn-md" style={{backgroundColor:'#D4CBE5',color:'white'}} onClick={hideConfirm}>Non</button></div>
                     </div>
                 </div>
             </div>

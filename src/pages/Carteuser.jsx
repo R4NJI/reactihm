@@ -1,8 +1,11 @@
 import imagefraise from './image/imagefraise.png'
 import iconedituser from './image/iconedituser.png'
 import icondeleteuser from './image/icondeleteuser.png'
+import Modalconfirm from './Modalconfirm'
+import { useState } from 'react'
 
 function Carteuser() {
+    //css
     const mymargin = {
         marginRight:'25px'
     }
@@ -24,6 +27,12 @@ function Carteuser() {
 
     }
 
+    const [confirm,setConfirm] = useState(false)
+
+    const hideConfirm = () => {
+        setConfirm(false)
+    }
+
     return (
         <div className='d-flex flex-column justify-content-center' style={divcarte}>
             <div style={{textAlign:'center',width:'180px',height:'132px'}}><img src={imagefraise} alt='fraise' style={imgStyle}/></div>
@@ -41,9 +50,10 @@ function Carteuser() {
                     </button>
                 </div>
                 <div>
-                    <button type='button' className="btn btn-md" style={{backgroundColor:'#ED474A',color:'white'}}>
-                        <img src={icondeleteuser} alt="icon pour editer l'user"/>
+                    <button type='button' className="btn btn-md" style={{backgroundColor:'#ED474A',color:'white'}} onClick={()=>setConfirm(true)}>
+                        <img src={icondeleteuser} alt="icon pour supprimer l'user"/>
                     </button>
+                    {confirm && <Modalconfirm hideConfirm={hideConfirm}/>}
                 </div>
             </div>
 

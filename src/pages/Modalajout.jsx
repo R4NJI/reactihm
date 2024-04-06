@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-function Modalajout() {
+function Modalajout( {hideAjoutProduit} ) {
     const inputRef = useRef()
 
     const [selectedFile,setSelectedFile] = useState(null)
@@ -87,7 +87,7 @@ function Modalajout() {
                 </div>
 
                 <div className='d-flex flex-row justify-content-start mb-4' >
-                    <div style={{marginRight:'20px',marginLeft:'18px'}}><button type="button" className="btn btn-sm" style={{backgroundColor:'#D4CBE5',color:'white'}}>Annuler</button></div>
+                    <div style={{marginRight:'20px',marginLeft:'18px'}}><button type="button" className="btn btn-sm" style={{backgroundColor:'#D4CBE5',color:'white'}} onClick={hideAjoutProduit}>Annuler</button></div>
                     <div><button type="submit" className="btn btn-success btn-sm">Confirmer</button></div>
                 </div>
             </form>

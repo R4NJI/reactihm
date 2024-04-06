@@ -1,7 +1,19 @@
 import imagefraise from './image/imagefraise.png'
 import iconstockok from './image/iconstockok.png'
+import { useState } from 'react';
+import Modaldetails from './Modaldetails';
 
 function Carte() {
+    const [details,setDetails] = useState(false)
+
+    const showDetails = () => {
+        setDetails(true)
+    }
+    const hideDetails = () => {
+        setDetails(false)
+    }
+
+
     const mymargin = {
         marginRight:'25px'
     }
@@ -42,9 +54,9 @@ function Carte() {
             </div>
 
             <div className='d-flex flex-row justify-content-end'>
-                <div style={{textAlign:'right', color:'#863718', fontWeight:'bold', cursor: 'pointer'}}>Détails &gt;</div>
+                <div style={{textAlign:'right', color:'#863718', fontWeight:'bold', cursor: 'pointer'}} onClick={showDetails}>Détails &gt;</div>
             </div>
-            
+            { details && <Modaldetails hideDetails={hideDetails}/>}
         </div>
     )
 }

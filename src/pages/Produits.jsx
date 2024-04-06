@@ -1,14 +1,13 @@
 
-import iconsearch from './image/iconsearch.png'
+import iconsearch from './image/iconsearch.png';
 
-import Carte from './Carte'
+import Carte from './Carte';
 import { useState } from 'react';
 
+import Modalajout from './Modalajout';
+
 const Produits = () => {
-    const [selectedCategory,setSelectedCategory] = useState('Tous les catégories')
-
-    const categories = ['Tous les catégories', 'Fruits', 'Cat1', 'Cat2', 'Cat3', 'Cat4'];
-
+    //partie css
     const scrollcarte = {
         maxHeight:'290px',
         overflowY:'auto'
@@ -17,6 +16,18 @@ const Produits = () => {
     const mymargin = {
         marginRight:'40px'
     }
+
+    const hideAjoutProduit = () => {
+        setAjoutProduit(false)
+    }
+
+    //pour gérer la fenêtre modale de l'ajout de produit
+    const [ajoutProduit,setAjoutProduit] = useState(false)
+    
+    const [selectedCategory,setSelectedCategory] = useState('Tous les catégories')
+
+    const categories = ['Tous les catégories', 'Fruits', 'Cat1', 'Cat2', 'Cat3', 'Cat4'];
+
 
     const handleOnClickCategory = (category) => {
         setSelectedCategory(category)
@@ -39,7 +50,8 @@ const Produits = () => {
                     </div>
 
                     <div>
-                        <button type="button" className="btn btn-sm" style={{backgroundColor:'#1C822C',color:'white'}}>+ Produit</button>
+                        <button type="button" className="btn btn-sm" style={{backgroundColor:'#1C822C',color:'white'}} onClick={()=>setAjoutProduit(true)}>+ Produit</button>
+                        { ajoutProduit && <Modalajout hideAjoutProduit={hideAjoutProduit}/>}
                     </div>
                 </div>
                 

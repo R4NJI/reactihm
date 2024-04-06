@@ -1,7 +1,8 @@
 import imagefraise from './image/imagefraise.png'
 import iconstockok from './image/iconstockok.png'
 
-function Modaldetails() {
+function Modaldetails( { hideDetails } ) {
+//css style
     const stylecontainer = {
         position:'absolute',
         top:'0',
@@ -22,14 +23,16 @@ function Modaldetails() {
         height: 'auto' 
       };
 
-    const mymargin= {
+    const mymargin = {
         marginRight:'15px'
     }
+
+//events
 
 
     return (
         <div className="d-flex flex-column justify-content-center align-items-center" style={stylecontainer}>
-            <div style={stylediv}>
+            <div style={stylediv} className='bg-white'>
                 <div className="d-flex flex-row justify-content-between mt-4 mb-3">
                     <div style={{marginLeft:'565px',fontWeight:'bold'}}>Fruits &gt; Fraise</div>
                     <div style={{color:'#863718',fontWeight:'bold',cursor: 'pointer',marginRight:'20px'}}>Modifier...</div>
@@ -134,7 +137,7 @@ function Modaldetails() {
                     </table>
                 </div>
                 
-                <div className="d-flex flex-row justify-content-end mb-3" style={{color:'#863718',fontWeight:'bold',marginRight:'20px',cursor:'pointer'}}>
+                <div className="d-flex flex-row justify-content-end mb-3" style={{color:'#863718',fontWeight:'bold',marginRight:'20px',cursor:'pointer'}} onClick={hideDetails}>
                     &lt; Moins détails
                 </div>
 
